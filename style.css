@@ -1,0 +1,398 @@
+/* ___Global Reset___ */
+/* CSS Global Reset courtesy of
+   http://meyerweb.com/eric/tools/css/reset/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ___Singapore Stylesheet___ */
+
+/* --Common Styles-- */
+
+/* Primary Fonts */
+
+html {
+	font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	background-color: whitesmoke;
+	color: #222;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+}
+h2 {
+	font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: white;
+}
+header ul {
+  margin: 0 5em 0 5em;
+  list-style: none;
+  display: flex;
+}
+header ul li {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+header ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+	font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding 5px;
+  color:black;
+  background-color:  white;
+}
+header ul li a:hover {
+  color: White;
+  background-color: DimGrey;
+}
+#header-logo-img {
+  height: 1.5em;
+  padding: 0.6em;
+}
+
+/* General Main Objects */
+main {
+	box-sizing: border-box;
+	margin: 2% 2% 1% 2%;
+	padding: 2% 2% 2% 2%;
+	background-color: white;
+}
+main.textmain {
+	box-sizing: border-box;
+	margin: 2% 2% 1% 2%;
+	padding: 2% 10% 2% 10%;
+	background-color: white;
+}
+.main-top {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid darkgrey;
+	padding: 0 0 1.2em 0;
+	margin: 0 0 2rem 0;
+}
+.main-top h1 {
+	box-sizing: border-box;
+	padding-right: 1rem;
+	text-align: right;
+	width: 50%;
+}
+.main-top p {
+	position: relative;
+	text-align: left;
+	top: 0.2em;
+	box-sizing: border-box;
+	font-size: 1em;
+  width: 30%;
+	margin-right: 20%;
+	padding-left: 0.5rem;
+}
+
+/* General Table */
+table {
+	box-sizing: border-box;
+}
+tr:nth-child(even) {
+	background-color: #e6e6e6;
+}
+th {
+	box-sizing: border-box;
+	padding-bottom: 0.5em;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+td {
+	box-sizing: border-box;
+	padding: 0.5em 0 0.5em 1em;
+	vertical-align: middle;
+}
+
+/* Footer */
+footer {
+	display: flex;
+	justify-content: flex-end;
+	border-top: 1px solid lightgrey;
+	padding: 0.8em;
+	margin: 2em;
+}
+footer p {
+	color: darkgrey;
+}
+footer small {
+	font-size: 0.8rem;
+}
+
+/* --Index Page-- */
+
+/* Gallery */
+.trigger {
+  display: none;
+}
+
+.gallery {
+  padding-bottom: 3.5em;
+	margin-bottom: 1em;
+  border-bottom: 1px solid darkgrey;
+}
+
+.gallery, .gallery-container {
+  position: relative;
+  height: 30em;
+}
+
+.gallery-container{
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.gallery-item {
+  background-color: black;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+  transition: opacity .5s easy-in-out;
+}
+
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.gallery-item figure {
+  height: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.trigger:checked + .gallery-item {
+  z-index: 6000;
+  opacity: 1;
+}
+
+.gallery-nav__item {
+  display: inline-block;
+}
+
+.gallery-nav__label {
+  font-size: 0.8em;
+  background-color: #333;
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: background-color .25s, color .25s ease-in-out;
+}
+
+.gallery-nav__label:hover,
+.gallery-nav__label:active,
+.gallery-nav__label:focus {
+  background-color: gray;
+  color: black;
+}
+
+.gallery-nav {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.gallery-infobox {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 30em;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 0 0;
+  text-align:left;
+  line-height: auto;
+  padding: 1em 2em 1.5em 2em;
+}
+.gallery-infobox h2 {
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+  line-height: 1.7em;
+}
+.gallery-infobox p {
+  color: white;
+  font-size: 1em;
+}
+.gallery-infobox a {
+  color: tomato;
+  text-decoration: none;
+}
+.gallery-infobox a:hover {
+  color: red;
+}
+
+/* Instagram feed */
+/* https://stackoverflow.com/questions/166160/how-can-i-scale-the-content-of-an-iframe */
+#instagram_feed {
+    margin: 0 2em 0 2em;
+}
+.feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.feed-item {
+  width: 15em;
+  flex: 1 0 auto;
+}
+
+/* --Sights page-- */
+
+/* Sights Grid */
+.sights-grid {
+	display: grid;
+	grid-auto-rows: 20em;
+	grid-template-columns: 2fr 2fr 2fr;
+	grid-auto-flow: row;
+	grid-gap: 1em 2%;
+}
+.sights-link {
+	color: white;
+  text-decoration: none;
+}
+.sights-item {
+	height: 100%;
+	width: 100%;
+}
+.sights-infobox a {
+  color: tomato;
+  text-decoration: none;
+}
+.sights-item img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.sights-item img:hover {
+	opacity: 0.6;
+	transition: opacity 0.2s ease-out;
+}
+.sights-infobox {
+	position: relative;
+  bottom: 3em;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 0 0;
+  text-align:left;
+  line-height: auto;
+	padding: 1em 0 1em 0;
+}
+.sights-infobox h2 {
+  color: white;
+  font-size: 1em;
+	font-weight: bold;
+	text-indent: 2em;
+}
+
+/* --About Singapore Page-- */
+
+#gardens-banner {
+	width: 100%;
+	margin-bottom: 3em;
+}
+.about_sg-section {
+	text-align: justify;
+	margin: 0 35em 2em 5em;
+}
+.about_sg-h2 {
+	width: 100%;
+	text-align: center;
+
+}
+.about_sg-aside {
+	position: relative;
+	float: right;
+	width: 25em;
+	margin-right: 5em;
+	clear: both;
+	margin-top: 3em;
+}
+.about_sg-aside img {
+	width: 100%;
+	fill: cover;
+	float: right;
+}
+.about_sg-aside table {
+	width: 100%;
+	margin-top: -2em;
+}
