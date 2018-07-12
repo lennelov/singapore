@@ -131,7 +131,7 @@ header ul li a:hover {
 /* General Main Objects */
 main {
 	box-sizing: border-box;
-	margin: 2% 2% 1% 2%;
+	margin: 1.5rem 2% 1% 2%;
 	padding: 2% 2% 2% 2%;
 	background-color: white;
 }
@@ -396,9 +396,9 @@ footer small {
 }
 .sights-infobox {
 	position: relative;
-  bottom: 3em;
-  left: 0;
+	bottom: 3.1em;
   width: 100%;
+	height: 1em;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 0 0;
   text-align:left;
