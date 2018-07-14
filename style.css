@@ -127,7 +127,7 @@ header ul li a:hover {
   height: 1.5em;
 }
 #header-logo-img:hover {
-  content: url('images/singapore-logo-white.svg');
+  content: url('https://lennelov.github.io/singapore/images/singapore-logo-white.svg');
 }
 
 /* General Main Objects */
