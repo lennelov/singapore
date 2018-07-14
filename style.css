@@ -119,16 +119,30 @@ header ul li a {
 header ul li a.header-nav-selected {
 	background-color: #DDD;
 }
-header ul li a:hover {
+header ul li a:hover, header ul li a:focus {
   color: White;
   background-color: #db0000;
 }
+header ul li a:active {
+	color: White;
+  background-color: #ff4d4d;
+}
+header ul li a:hover img, header ul li a:focus img {
+	/* Hides logo image to reveal background image with white text */
+  opacity: 0;
+}
 #header-logo-img {
-  height: 1.5em;
+	height: 1.5em;
 }
-#header-logo-img:hover {
-  content: url('https://lennelov.github.io/singapore/images/singapore-logo-white.svg');
+
+#header-logo a {
+	/* Makeshift solution for making the logo white while hovering, without using javascript */
+	background-image: url('https://lennelov.github.io/singapore/images/singapore-logo-white.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 6.35em;
 }
+
 
 /* General Main Objects */
 main {
@@ -194,6 +208,7 @@ main.textmain {
 		padding-right: 20%;
 	}
 }
+
 /* General Table */
 table {
 	box-sizing: border-box;
@@ -412,7 +427,12 @@ footer small {
 	text-indent: 2em;
 }
 
-/* --About Singapore Page-- */
+/* -- Get There Page -- */
+.skyscanner-widget {
+	max-width: 40em;
+	margin: auto;
+}
+/* -- About Singapore Page -- */
 
 #gardens-banner {
 	width: 100%;
