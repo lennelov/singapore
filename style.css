@@ -71,7 +71,6 @@ h2 {
 	font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-	margin-bottom: 1rem;
 }
 
 /* Header */
@@ -122,10 +121,13 @@ header ul li a.header-nav-selected {
 }
 header ul li a:hover {
   color: White;
-  background-color: DimGrey;
+  background-color: #db0000;
 }
 #header-logo-img {
   height: 1.5em;
+}
+#header-logo-img:hover {
+  content: url('images/singapore-logo-white.svg');
 }
 
 /* General Main Objects */
@@ -136,10 +138,7 @@ main {
 	background-color: white;
 }
 main.textmain {
-	box-sizing: border-box;
-	margin: 2% 2% 1% 2%;
 	padding: 2% 10% 2% 10%;
-	background-color: white;
 }
 .main-top {
 	display: flex;
@@ -192,6 +191,7 @@ main.textmain {
 		text-align: left;
 		width: 50%;
 		margin-top: 0.6em;
+		padding-right: 20%;
 	}
 }
 /* General Table */
@@ -418,29 +418,38 @@ footer small {
 	width: 100%;
 	margin-bottom: 3em;
 }
-.about_sg-section {
-	text-align: justify;
-	margin: 0 35em 2em 5em;
+.text_and_aside {
+	width: 100%;
+	display: grid;
+	grid:
+		[content-start] "left right"
+		/[left] 3fr [right] 2fr;
+	grid-column-gap: 5%;
 }
-.about_sg-h2 {
+.text_and_aside .text-body {
+	grid-area: left;
+	text-align: justify;
+}
+.text_and_aside aside {
+	grid-area: right;
+}
+.text_and_aside h2 {
 	width: 100%;
 	text-align: center;
+	margin-bottom: 0.3em;
+}
 
+.text_and_aside section {
+	margin-bottom: 2em;
 }
-.about_sg-aside {
-	position: relative;
-	float: right;
-	width: 25em;
-	margin-right: 5em;
-	clear: both;
-	margin-top: 3em;
-}
-.about_sg-aside img {
+
+.text_and_aside aside figure {
 	width: 100%;
+	margin-bottom: 2em;
+}
+.text_and_aside aside figure > * {
+	width: 100%;
+}
+.text_and_aside aside figure img {
 	fill: cover;
-	float: right;
-}
-.about_sg-aside table {
-	width: 100%;
-	margin-top: -2em;
 }
