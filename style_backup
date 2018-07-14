@@ -145,18 +145,15 @@ header ul li a:hover img, header ul li a:focus img {
 
 
 /* General Main Objects */
-
 main {
 	box-sizing: border-box;
 	margin: 1.5rem 2% 1% 2%;
 	padding: 2% 2% 2% 2%;
 	background-color: white;
 }
-
 main.textmain {
 	padding: 2% 10% 2% 10%;
 }
-
 .main-top {
 	display: flex;
 	flex-direction: column;
@@ -185,13 +182,11 @@ main.textmain {
 		justify-content: center;
 	}
 } */
-
 .main-top h1 {
 	box-sizing: border-box;
 	text-align: center;
 	width: 100%;
 }
-
 @media screen and (min-width: 45em) {
 	.main-top h1 {
 		text-align: right;
@@ -199,14 +194,12 @@ main.textmain {
 		padding-right: 1rem;
 	}
 }
-
 .main-top p {
 	box-sizing: border-box;
 	text-align: center;
   width: 100%;
 	margin-top: 0.7em;
 }
-
 @media screen and (min-width: 45em) {
 	.main-top p {
 		text-align: left;
@@ -217,22 +210,18 @@ main.textmain {
 }
 
 /* General Table */
-
 table {
 	box-sizing: border-box;
 }
-
 tr:nth-child(even) {
 	background-color: #e6e6e6;
 }
-
 th {
 	box-sizing: border-box;
 	padding-bottom: 0.5em;
 	font-size: 1.25em;
 	font-weight: bold;
 }
-
 td {
 	box-sizing: border-box;
 	padding: 0.5em 0 0.5em 1em;
@@ -240,7 +229,6 @@ td {
 }
 
 /* Footer */
-
 footer {
 	display: flex;
 	justify-content: flex-end;
@@ -248,11 +236,9 @@ footer {
 	padding: 0.8em;
 	margin: 2em;
 }
-
 footer p {
 	color: darkgrey;
 }
-
 footer small {
 	font-size: 0.8rem;
 }
@@ -260,7 +246,6 @@ footer small {
 /* --Index Page-- */
 
 /* Gallery */
-
 .trigger {
   display: none;
 }
@@ -280,26 +265,26 @@ footer small {
   max-width: 100%;
   position: relative;
   margin: auto;
-	transition: opacity .5s easy-in-out;
 }
 
 .gallery-item {
   background-color: black;
   width: 100%;
+  overflow: hidden;
   position: absolute;
   height: 100%;
-	opacity: 0;
-  transition: opacity .7s;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+  transition: opacity .5s easy-in-out;
 }
 
 .gallery img {
-  min-width: 100%;
-	height: 100%;
+  width: 100%;
   object-fit: cover;
-}
-
-#img1 {
-	object-position: 0 0;
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
 }
 
 .gallery-item figure {
@@ -309,17 +294,17 @@ footer small {
 }
 
 .trigger:checked + .gallery-item {
+  z-index: 6000;
   opacity: 1;
 }
 
 .gallery-nav__item {
   display: inline-block;
-	transition: opacity .5s easy-in-out;
 }
 
 .gallery-nav__label {
   font-size: 0.8em;
-  background-color: #db0000;
+  background-color: #333;
   display: block;
   height: 2em;
   line-height: 2em;
@@ -332,12 +317,10 @@ footer small {
 }
 
 .gallery-nav__label:hover,
+.gallery-nav__label:active,
 .gallery-nav__label:focus {
-  background-color: #ff3333;
-}
-
-.gallery-nav__label:active {
-	background-color: #ff8d8d;
+  background-color: gray;
+  color: black;
 }
 
 .gallery-nav {
@@ -347,79 +330,52 @@ footer small {
 }
 
 .gallery-infobox {
-	overflow-wrap: normal;
-	box-sizing: border-box;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 15%;
+  width: 30em;
   background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 0 0;
   text-align:left;
   line-height: auto;
   padding: 1em 2em 1.5em 2em;
 }
-@media screen and (min-width: 35em) {
-	.gallery-infobox {
-	  right: 0;
-		left: auto;
-	  width: 30em;
-	}
-}
-@media screen and (min-width: 40em) {
-	.gallery-infobox {
-	  left: 15%
-	}
-}
-
 .gallery-infobox h2 {
   font-weight: bold;
   color: white;
-  font-size: 1.5em;
-	margin-bottom: 0.3em;
+  font-size: 2em;
+  line-height: 1.7em;
 }
-
 .gallery-infobox p {
   color: white;
   font-size: 1em;
 }
-
 .gallery-infobox a {
-  color: #ff3333;
+  color: tomato;
   text-decoration: none;
 }
-
 .gallery-infobox a:hover {
-  color: #ff6666;
-}
-
-.gallery-infobox a:active {
-  color: #ffb3b3;
+  color: red;
 }
 
 /* Instagram feed */
 /* https://stackoverflow.com/questions/166160/how-can-i-scale-the-content-of-an-iframe */
-
 #instagram_feed {
-    margin: 2em 2em 0 2em;
+    margin: 0 2em 0 2em;
 }
-
 .feed {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-	align-items: stretch;
 }
-
 .feed-item {
-	max-width: 30em;
-  flex: 1 1 auto;
-	margin: auto;
+  width: 15em;
+  flex: 1 0 auto;
 }
 
 /* -- Sights Page -- */
 
 /* Sights Grid */
-
 .sights-grid {
 	display: grid;
 	grid-auto-rows: 20em;
@@ -427,39 +383,32 @@ footer small {
 	grid-auto-flow: row;
 	grid-gap: 1em 2%;
 }
-
 @media screen and (min-width: 45em) {
 	.sights-grid {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
-
 .sights-link {
 	color: white;
   text-decoration: none;
 }
-
 .sights-item {
 	height: 100%;
 	width: 100%;
 }
-
 .sights-infobox a {
   color: tomato;
   text-decoration: none;
 }
-
 .sights-item img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
-
 .sights-item img:hover {
 	opacity: 0.6;
 	transition: opacity 0.2s ease-out;
 }
-
 .sights-infobox {
 	position: relative;
 	bottom: 3.1em;
@@ -471,7 +420,6 @@ footer small {
   line-height: auto;
 	padding: 1em 0 1em 0;
 }
-
 .sights-infobox h2 {
   color: white;
   font-size: 1em;
@@ -488,7 +436,6 @@ article.sight {
 #pinnacle_view {
 	width: 100%;
 }
-
 #pinnacle_view img {
 	object-fit: cover;
 	width: 100%;
@@ -507,89 +454,23 @@ article.sight {
 	width: 100%;
 	margin-bottom: 3em;
 }
-
 .text_and_aside {
-	width: 60em;
-	max-width: 100%;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-
+	width: 100%;
+	display: grid;
+	grid:
+		[section1-start] "left1 right1"
+		[section2-start] "left2 right2"
+		[section3-start] "left3 right2"
+		[section3-start] "left4 right3"
+		/3fr 2fr;
+	grid-column-gap: 5%;
+	grid-auto-flow: column;
 }
-@media screen and (min-width: 50em) {
-	.text_and_aside {
-		display: grid;
-		grid:
-			[content-start] "left right"
-			/[left] 3fr [right] 2fr;
-		grid-column-gap: 5%;
-	}
-}
-
-.text_and_aside .text-body {
-	display: contents;
+.about_sg section {
 	text-align: justify;
 }
-@media screen and (min-width: 50em) {
-	.text_and_aside .text-body {
-		display: flex;
-		flex-direction: column;
-		grid-area: left;
-	}
+.about_sg aside {
 }
-
-.text_and_aside aside {
-	display: contents;
-}
-@media screen and (min-width: 50em) {
-	.text_and_aside aside {
-		display: flex;
-		flex-direction: column;
-		grid-area: right;
-	}
-}
-
-@media screen and (min-width: 50em) {
-	.text_and_aside aside figure.image_figure {
-		flex: 1 1 auto;
-	}
-}
-
-@media screen and (min-width: 50em) {
-	.text_and_aside aside figure img {
-		/* Maintains pleasant composition when page is resized */
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-#about_sg-aside1 {
-	order: 0
-}
-#about_sg-section1 {
-	order: 1
-}
-#about_sg-aside2 {
-	order: 2
-}
-#about_sg-section2 {
-	order: 3
-}
-#about_sg-section3 {
-	order: 4
-}
-#about_sg-aside3 {
-	order: 5
-}
-@media screen and (min-width: 50em) {
-	#about_sg-aside3 img {
-		object-position: 30% 50%;
-	}
-}
-#about_sg-section4 {
-	order: 6
-}
-
 .text_and_aside h2 {
 	width: 100%;
 	text-align: center;
@@ -600,15 +481,13 @@ article.sight {
 	margin-bottom: 2em;
 }
 
-.text_and_aside aside figure {
+.text_and_aside aside {
 	width: 100%;
 	margin-bottom: 2em;
 }
-
-.text_and_aside aside figure > * {
+.text_and_aside aside > * {
 	width: 100%;
 }
-
-.text_and_aside aside figure img {
+.text_and_aside aside img {
 	fill: cover;
 }
