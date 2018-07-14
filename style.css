@@ -286,6 +286,7 @@ footer small {
 .gallery-item {
   background-color: black;
   width: 100%;
+	overflow: hidden;
   position: absolute;
   height: 100%;
 	opacity: 0;
@@ -293,13 +294,9 @@ footer small {
 }
 
 .gallery img {
-  min-width: 100%;
-	height: 100%;
+  width: 100%;
+	min-height: 100%;
   object-fit: cover;
-}
-
-#img1 {
-	object-position: 0 0;
 }
 
 .gallery-item figure {
