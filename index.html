@@ -2,11 +2,13 @@
 <html>
 
 <head>
+  <title>Singapore</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="images/singapore-logo-icon-16.png"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,700" />
 </head>
 
 <body>
@@ -43,7 +45,7 @@
         <section >
           <input type="radio" name="gallery" class="trigger" id="one" checked="checked"/>
           <figure class="gallery-item">
-            <img id="img1" class="gallery-img"src="images/pinnacle-large.jpg" alt="The pinnacle at Duxton, a towering high-rise."
+            <img id="gallery-img1" class="gallery-img"src="images/pinnacle-large.jpg" alt="The pinnacle at Duxton, a towering high-rise."
             srcset="images/pinnacle-800.jpg 800w,
                     images/pinnacle-large.jpg 1000w"
             sizes="95vw" />
@@ -53,19 +55,24 @@
                 Award-winning 50-storey residential development in Singapore's city center, next to the business district. The project features the world's two longest sky gardens of 500 metres (1,600 ft) each, on both the 26th and 50th floors.
                 <a href="sights/pinnacle.html">Read more...</a>
               </p>
+            </figcaption>
           </figure>
         </section>
 
         <section id="item2">
           <input type="radio" name="gallery" class="trigger" id="two"/>
           <figure class="gallery-item">
-            <img id="img2" src="images/buddha-large.jpg" alt="Golden statue of Buddha in the dimly lit temple interior."/>
+            <img id="gallery-img2" src="images/buddha-large.jpg" alt="Golden statue of Buddha in the dimly lit temple interior."
+            srcset="images/buddha-800.jpg 800w,
+                    images/buddha-large.jpg 1000w"
+            sizes="95vw" />
             <figcaption class="gallery-infobox">
               <h2>Buddha Tooth Temple</h2>
               <p>
-                The Buddha Tooth Relic Temple & Museum located in the Chinatown district was recently built in 2007, but the temple’s richly designed interiors and comprehensive exhibits on Buddhist art and history tell stories of culture over hundreds of years old.
-                <a href="pinnacle.html">Read more...</a>
+                The Buddha Tooth Relic Temple &amp; Museum located in the Chinatown district was recently built in 2007, but the temple’s richly designed interiors and comprehensive exhibits on Buddhist art and history tell stories of culture over hundreds of years old.
+                <a href="sights/buddha.html">Read more...</a>
               </p>
+            </figcaption>
           </figure>
         </section>
       </div>
@@ -77,13 +84,14 @@
     </article>
 
     <article id="instagram_feed">
-      <div class="main-top">
+      <header class="main-top">
         <h1>#Singapore</h1>
         <p>
           See what the city is up to.
         </p>
-      </div>
+      </header>
       <ul class="feed">
+        <!-- Instagram posts embedded according to instructions at https://www.instagram.com/developer/embedding/ -->
         <li class="feed-item">
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Bk7rIT7gvMS/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:22px; margin:0 auto -22px; position:relative; top:-11px; width:22px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:7px; line-height:8px; margin-bottom:0; margin-top:4px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Bk7rIT7gvMS/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:6px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ett inlägg delat av Auni Nadzirah Abdul Rashid (@auninadzirah)</a> <time style=" font-family:Arial,sans-serif; font-size:6px; line-height:17px;" datetime="2018-07-07T13:38:30+00:00">7 Jul 2018 kl. 6:38 PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
         </li>
@@ -105,17 +113,12 @@
   </main>
 
   <footer>
-    <ul>
-      <li>
-        <p>
-          <small>Copyright lorem ipsum.</small>
-        </p>
-        </p>
-      </li>
-    </ul>
+    <p>
+      <small>Copyright &copy; Einar Lennelöv 2018. All Rights Reserved.</small>
+    </p>
   </footer>
-
 </div>
+
 </body>
 
 </html>

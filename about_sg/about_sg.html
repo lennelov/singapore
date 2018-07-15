@@ -3,11 +3,13 @@
 <html>
 
 <head>
+  <title>About Singapore</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="../images/singapore-logo-icon-16.png"/>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,700" />
 </head>
 
 <body>
@@ -35,15 +37,19 @@
 
   <main id="about_sg-main" class="textmain">
     <article>
-      <div class="main-top">
+      <header class="main-top">
         <h1>About Singapore</h1>
         <p>
           Learn more about the worlds only city-state.
         </p>
-      </div>
+      </header>
 
       <figure>
-        <img id="gardens-banner" src="../images/gardens-large.jpg" alt="The futuristic, dome-shaped Singapore Cloud Gardens by the water."/>
+        <img id="gardens-banner" src="../images/gardens-large.jpg" alt="The futuristic, dome-shaped Singapore Cloud Gardens by the water."
+        srcset="../images/gardens-500.jpg 500w,
+                ../images/gardens-800.jpg 11000w,
+                ../images/gardens-large.jpg 1500w"
+        sizes="85vw" />
       </figure>
 
       <div class="text_and_aside">
@@ -51,11 +57,11 @@
           <section id="about_sg-section1">
             <h2 class="about_sg-h2">A country like no other</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <a href="../sights/marina.html">Marina Bay Sands</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla <a href="../sights/buddha.html">Buddhist temples</a> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </section>
 
@@ -66,7 +72,7 @@
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <a href="../sights/waterfront.html">waterfront</a> minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </section>
 
@@ -88,7 +94,7 @@
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor <a href="../sights/gardens.html">Gardens by the Bay</a> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </section>
         </div>
@@ -143,11 +149,11 @@
           </figure>
 
           <figure id="about_sg-aside2" class="image_figure">
-            <img src="../images/center-large.jpg" alt="The central business district of Singapore, consisting of a group of skyscrapers at the waterfront." />
+            <img src="../images/center-800.jpg" alt="The central business district of Singapore, consisting of a group of skyscrapers at the waterfront." />
           </figure>
 
           <figure id="about_sg-aside3" class="image_figure">
-            <img src="../images/bonsai-large.jpg" alt="Well kept bonsai trees in the Singapore Botanical garden." />
+            <img src="../images/bonsai-800.jpg" alt="Well kept bonsai trees in the Singapore Botanical garden." />
           </figure>
         </aside>
       </div>
@@ -155,16 +161,10 @@
   </main>
 
   <footer>
-    <ul>
-      <li>
-        <p>
-          <small>Copyright lorem ipsum.</small>
-        </p>
-        </p>
-      </li>
-    </ul>
+    <p>
+      <small>Copyright &copy; Einar Lennelöv 2018. All Rights Reserved.</small>
+    </p>
   </footer>
-
 </body>
 
 </html>

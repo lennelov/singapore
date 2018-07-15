@@ -3,11 +3,13 @@
 <html>
 
 <head>
+  <title>Buddha Tooth Temple</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="../images/singapore-logo-icon-16.png"/>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,700" />
 </head>
 
 <body>
@@ -35,15 +37,19 @@
 
   <main class="textmain">
     <article class="sight">
-      <div class="main-top">
+      <header class="main-top">
         <h1>Buddha Tooth Temple</h1>
         <p>
           A recently built temple said to house an ancient artifact. Old meets new in this Chinatown site.
         </p>
-      </div>
+      </header>
       <div class="sight-content">
         <figure class="sight-main-figure">
-          <img class="sight-main-img" src="../images/buddha-large.jpg" alt="Golden statue of Buddha in the dimly lit temple interior."/>
+          <img class="sight-main-img" src="../images/buddha-large.jpg" alt="Golden statue of Buddha in the dimly lit temple interior."
+          srcset="../images/buddha-500.jpg 500w,
+                  ../images/buddha-800.jpg 900w,
+                  ../images/buddha-large.jpg 1400w"
+          sizes="85vw" />
         </figure>
 
         <div class="sight-content-text">
@@ -68,20 +74,43 @@
           </p>
         </div>
       </div>
+
+      <nav class="sight-internal-nav">
+        <h2>More sights</h2>
+        <ul>
+          <li>
+            <a class="sights-internal-nav-item" href="pinnacle.html">The Pinnacle</a>
+          </li>
+
+          <li>
+            <a href="buddha.html" class="sight-internal-nav-selected sights-internal-nav-item">Buddha Tooth Temple</a>
+          </li>
+
+          <li>
+            <a href="waterfront.html" class="sights-internal-nav-item">Singapore Waterfront</a>
+          </li>
+
+          <li>
+            <a href="hindu.html" class="sights-internal-nav-item">Hindu Temple</a>
+          </li>
+
+          <li>
+            <a href="gardens.html" class="sights-internal-nav-item">Gardens by the Bay</a>
+          </li>
+
+          <li>
+            <a href="marina.html" class="sights-internal-nav-item">Marina Bay Sands</a>
+          </li>
+        </ul>
+      </nav>
     </article>
   </main>
 
   <footer>
-    <ul>
-      <li>
-        <p>
-          <small>Copyright lorem ipsum.</small>
-        </p>
-        </p>
-      </li>
-    </ul>
+    <p>
+      <small>Copyright &copy; Einar Lennelöv 2018. All Rights Reserved.</small>
+    </p>
   </footer>
-
 </body>
 
 </html>

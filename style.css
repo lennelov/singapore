@@ -46,11 +46,11 @@ table {
 	border-spacing: 0;
 }
 
-/* ___Singapore Stylesheet___ */
+/* ___Singapore Website Stylesheet___ */
 
-/* --Common Styles-- */
+/* -- Common Styles -- */
 
-/* Primary Fonts */
+/* Primary Text Styles */
 html {
 	font-size: 16px;
 }
@@ -69,6 +69,23 @@ h2 {
 	font: bold 1.5rem/1 'Roboto', sans-serif;
 }
 
+sup {
+	font-size: small;
+	vertical-align: super;
+}
+
+a {
+  color: #ff3333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6666;
+}
+
+a:active {
+  color: #ffb3b3;
+}
 
 /* Header */
 header {
@@ -83,9 +100,9 @@ header ul {
 
 @media screen and (min-width: 60em) {
 	header ul {
-		margin: 0 5em;
-	  display: flex;
+		display: flex;
 		flex-direction: row;
+		margin: 0 5em;
 	}
 }
 
@@ -96,57 +113,65 @@ header ul li {
 }
 
 header ul li a {
-	font: 300 2em/1 'Montserrat', sans-serif;
-  display: flex;
+	/* Extends 'link clicking area' to whole 'box' in the navigation menu. display: flex is used for vertical centering. */
+	display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  justify-content: center;
+	justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: #222;
-	transition: color 0.1s;
-  background-color:  white;
-	transition: background-color 0.1s;
-	padding: 0.6em 0;
+	padding: .6em 0;
 	border-bottom: 1px solid lightgrey;
+	background-color:  white;
+
+	text-decoration: none;
+	font: 300 2em/1 'Montserrat', sans-serif;
+  color: #222;
+
+	transition: color .1s;
+	transition: background-color .1s;
 }
 @media screen and (min-width: 60em) {
 	header ul li a {
-		padding: 0.5em 0;
+		padding: .5em 0;
 		border: 0;
 	}
 }
+
 header ul li a.header-nav-selected {
 	background-color: #DDD;
 }
-header ul li a:hover, header ul li a:focus {
+
+header ul li a:hover,
+header ul li a:focus {
   color: White;
   background-color: #db0000;
 }
+
 header ul li a:active {
 	color: White;
   background-color: #ff4d4d;
 }
-header ul li a:hover img, header ul li a:focus img {
+
+header ul li a:hover img,
+header ul li a:focus img {
 	/* Hides logo image to reveal background image with white text */
   opacity: 0;
 }
+
 #header-logo-img {
 	height: 1.5em;
 }
 
 #header-logo a {
 	/* Makeshift solution for making the logo white while hovering, without using javascript */
-	/* Background shorthand intentially not used in order to avoid needing extra code to deal with specificity issues */
+	/* Background shorthand intentionally not used in order to avoid needing extra code to deal with specificity issues */
 	background-image: url('https://lennelov.github.io/singapore/images/singapore-logo-white.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 6.4em;
 }
 
-
 /* General Main Objects */
-
 main {
 	box-sizing: border-box;
 	margin: 1.5rem 2% 1%;
@@ -154,37 +179,41 @@ main {
 	background-color: white;
 }
 
-main.textmain {
+.textmain {
 	padding: 2% 10%;
 }
 
-main.textmain h2 {
-	margin: 1em 0 0.3em;
+.textmain h2 {
+	margin: 1em 0 .3em;
 }
 
 .main-top {
+	/* Styles title header as a column, with the 'subtitle' under the title. */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
 	width: 100%;
 	border-bottom: 1px solid darkgrey;
 	padding-bottom: 1.2em;
 	margin-bottom: 2rem;
 }
 @media screen and (min-width: 45em) {
+	/* Styles title header as a row, with title and 'subtitle' next to each other. */
 	.main-top {
 		flex-direction: row;
 	}
 }
 
 .main-top h1 {
+	/* Styles title for small viewports */
 	box-sizing: border-box;
 	text-align: center;
 	width: 100%;
 }
-
 @media screen and (min-width: 45em) {
+	/* Styles title for large viewports */
 	.main-top h1 {
 		text-align: right;
 		width: 50%;
@@ -193,52 +222,54 @@ main.textmain h2 {
 }
 
 .main-top p {
+	/* Styles 'subtitle' for small viewports */
 	box-sizing: border-box;
 	text-align: center;
   width: 100%;
-	margin-top: 0.7em;
+	margin-top: .7em;
 }
-
 @media screen and (min-width: 45em) {
 	.main-top p {
+		/* Adjusts 'subtitle' for large viewports */
 		text-align: left;
 		width: 50%;
-		margin-top: 0.6em;
+		margin-top: .6em;
 		padding-right: 20%;
 	}
 }
 
 /* General Table */
-
 table {
 	box-sizing: border-box;
 }
 
 tr:nth-child(even) {
+	/* Shades every other row in table */
 	background-color: #e6e6e6;
 }
 
 th {
 	box-sizing: border-box;
-	padding-bottom: 0.5em;
+	padding-bottom: .5em;
+
 	font-size: 1.25em;
 	font-weight: bold;
 }
 
 td {
 	box-sizing: border-box;
-	padding: 0.5em 0 0.5em 1em;
+	padding: .5em 0 .5em 1em;
 	vertical-align: middle;
 }
 
 /* Footer */
-
 footer {
 	display: flex;
 	justify-content: flex-end;
-	border-top: 1px solid lightgrey;
-	padding: 0.8em;
+
+	padding: .8em;
 	margin: 2em;
+	border-top: 1px solid lightgrey;
 }
 
 footer p {
@@ -246,14 +277,16 @@ footer p {
 }
 
 footer small {
-	font-size: 0.8rem;
+	font-size: .8rem;
 }
+
 
 /* --Index Page-- */
 
 /* Gallery */
-
+/* Gallery styles based on tutorial at http://w3bits.com/css-image-slider/ */
 .trigger {
+	/* Hides radio buttons from view. They are instead controlled using the gallery-nav_label items. */
   display: none;
 }
 
@@ -263,26 +296,26 @@ footer small {
   border-bottom: 1px solid darkgrey;
 }
 
-.gallery, .gallery-container {
+.gallery,
+.gallery-container {
   position: relative;
   height: 30em;
 }
 
 .gallery-container{
   max-width: 100%;
-  position: relative;
-  margin: auto;
-	transition: opacity .5s easy-in-out;
 }
 
 .gallery-item {
 	/* Opacity: 0 hides all items except selected item. z-index: 0 is used to allow for interaction with the top-most (selected) item. */
-  background-color: black;
-  width: 100%;
-  position: absolute;
+	position: absolute;
   height: 100%;
+  width: 100%;
+
+	background-color: black;
 	opacity: 0;
 	z-index: 0;
+
   transition: opacity .7s;
 }
 
@@ -292,46 +325,52 @@ footer small {
   object-fit: cover;
 }
 
-#img1 {
+#gallery-img1 {
+	/* Controls cropping when page is resized */
 	object-position: 60% 0%;
 }
 
-#img2 {
+#gallery-img2 {
+	/* Controls cropping when page is resized */
 	object-position: 50% 40%;
 }
 
 .gallery-item figure {
   height: 100%;
-  position: relative;
-  margin: 0;
 }
 
 .trigger:checked + .gallery-item {
+	/* Causes selected item to show and be sent to the top of the stack */
   opacity: 1;
 	z-index: 1;
 }
 
 .gallery-nav__item {
+	/* Centers navigation buttons on page */
   display: inline-block;
-	transition: opacity .5s easy-in-out;
+
+	transition: opacity .5s ease-in-out;
 }
 
 .gallery-nav__label {
+	/* Styles the navigation buttons */
 	display: block;
 	height: 2em;
 	width: 2em;
+
 	border-radius: 50%;
 	background-color: #db0000;
+	cursor: pointer;
+
 	color: white;
-  font-size: 0.8em;
+  font-size: .8em;
   line-height: 2em;
   text-align: center;
-  cursor: pointer;
-  transition: background-color .25s, color .25s ease-in-out;
+
+  transition: background-color .25s;
 }
 
-input[type="radio"]:checked~label{ background-color: grey}
-
+/* The following styles provides feedback when hovering and clicking/tapping the gallery nav buttons. Although it would be desirable, it seems almost impossible to select the label of the currently active item using pure CSS. Therefore, no style is applied to indicate the currently selected item. */
 .gallery-nav__label:hover,
 .gallery-nav__label:focus {
   background-color: #ff3333;
@@ -343,23 +382,26 @@ input[type="radio"]:checked~label{ background-color: grey}
 
 .gallery-nav {
   width: 100%;
+	margin: 1em 0;
   text-align: center;
-  margin: 1em 0;
 }
 
 .gallery-infobox {
-	overflow-wrap: normal;
-	box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
+	/* Styles and positions infobox for images in gallery. */
+	position: absolute;
+	bottom: 0;
   left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1em 2em 1.5em;
+	background: rgba(0, 0, 0, .7);
+
+	overflow-wrap: normal;
   text-align:left;
-  line-height: auto;
-  padding: 1em 2em 1.5em;
 }
 @media screen and (min-width: 35em) {
+	/* Causes infobox to "latch on to" right side of picture frame */
 	.gallery-infobox {
 	  right: 0;
 		left: auto;
@@ -367,16 +409,17 @@ input[type="radio"]:checked~label{ background-color: grey}
 	}
 }
 @media screen and (min-width: 40em) {
+	/* Causes infobox to "detach" from picture frame, and take a center-left position */
 	.gallery-infobox {
 	  left: 15%
 	}
 }
 
 .gallery-infobox h2 {
+	margin-bottom: .3em;
   font-weight: bold;
 	font-size: 1.5em;
   color: white;
-	margin-bottom: 0.3em;
 }
 
 .gallery-infobox p {
@@ -384,30 +427,14 @@ input[type="radio"]:checked~label{ background-color: grey}
   font-size: 1em;
 }
 
-.gallery-infobox a {
-  color: #ff3333;
-  text-decoration: none;
-}
-
-.gallery-infobox a:hover {
-  color: #ff6666;
-}
-
-.gallery-infobox a:active {
-  color: #ffb3b3;
-}
-
 /* Instagram feed */
-/* https://stackoverflow.com/questions/166160/how-can-i-scale-the-content-of-an-iframe */
-
 #instagram_feed {
     margin: 2em 2em 0;
 }
 
 .feed {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+	flex-flow: row wrap;
 	align-items: stretch;
 }
 
@@ -417,21 +444,22 @@ input[type="radio"]:checked~label{ background-color: grey}
 	margin: 0 auto;
 }
 
+
 /* -- Sights Page -- */
 
 /* Sights Grid */
-
 .sights-grid {
+	/* Sets up a grid with one column and an automatically incrementing number of rows. */
 	display: grid;
 	grid-auto-rows: 20em;
 	grid-template-columns: 1fr;
 	grid-auto-flow: row;
 	grid-gap: 1em 2%;
 }
-
 @media screen and (min-width: 45em) {
+	/* Modifies grid to have three columns for larger viewports. */
 	.sights-grid {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
@@ -445,11 +473,6 @@ input[type="radio"]:checked~label{ background-color: grey}
 	width: 100%;
 }
 
-.sights-infobox a {
-  color: tomato;
-  text-decoration: none;
-}
-
 .sights-item img {
 	object-fit: cover;
 	width: 100%;
@@ -457,26 +480,30 @@ input[type="radio"]:checked~label{ background-color: grey}
 }
 
 .sights-item img:hover {
-	opacity: 0.6;
-	transition: opacity 0.2s ease-out;
+	/* Slightly fades images when hovered on (background should be light neutral colour) */
+	opacity: .6;
+	transition: opacity .2s ease-out;
 }
 
 .sights-infobox {
+	/* Styles and positions caption-box */
 	position: relative;
 	bottom: 3.1em;
+
   width: 100%;
 	height: 1em;
-  background: rgba(0, 0, 0, 0.7);
-  text-align:left;
 	padding: 1em 0;
+  background: rgba(0, 0, 0, .7);
+
+  text-align:left;
 }
 
 .sights-infobox h2 {
   color: white;
   font-size: 1em;
-	font-weight: bold;
 	text-indent: 2em;
 }
+
 
 /* -- General Sight Page Styles -- */
 
@@ -501,8 +528,19 @@ input[type="radio"]:checked~label{ background-color: grey}
 	width: 100%;
 }
 
+.sight-internal-nav {
+	width: 35em;
+	margin: auto;
+}
+
+.sight-internal-nav-selected {
+	font-weight: bold;
+}
+
 /* -- Waterfront Page -- */
+
 #waterfront-main-top-p {
+	/* Balances title and subheading somewhat */
 	padding-right: 10%;
 }
 
@@ -523,15 +561,17 @@ input[type="radio"]:checked~label{ background-color: grey}
 }
 
 .text_and_aside {
-	width: 60em;
-	max-width: 100%;
-	margin: auto;
+	/* Flexbox for one-column layout */
 	display: flex;
 	flex-direction: column;
 
+	width: 60em;
+	max-width: 100%;
+	margin: auto;
 }
 @media screen and (min-width: 50em) {
 	.text_and_aside {
+		/* Grid for two-column layout */
 		display: grid;
 		grid:
 			[content-start] "left right"
@@ -541,42 +581,45 @@ input[type="radio"]:checked~label{ background-color: grey}
 }
 
 .text_and_aside .text-body {
+	/* display:contents allows sections to be arranged together with aside figures in one-column layout */
 	display: contents;
 	text-align: justify;
 }
 @media screen and (min-width: 50em) {
 	.text_and_aside .text-body {
+		/* Sets up left column as a flexbox for equal length columns. */
+		grid-area: left;
 		display: flex;
 		flex-direction: column;
-		grid-area: left;
 	}
 }
 
 .text_and_aside aside {
+	/* display:contents allows aside figures to be arranged together with sections in one-column layout */
 	display: contents;
 }
 @media screen and (min-width: 50em) {
 	.text_and_aside aside {
+		/* Sets up right column as a flexbox for equal length columns. */
+		grid-area: right;
 		display: flex;
 		flex-direction: column;
-		grid-area: right;
 	}
 }
 
+/* Misc styles for aside images in two-column layout */
 @media screen and (min-width: 50em) {
 	.text_and_aside aside figure.image_figure {
 		flex: 1 1 auto;
 	}
-}
-
-@media screen and (min-width: 50em) {
 	.text_and_aside aside figure img {
 		/* Maintains pleasant composition when page is resized */
-		height: 100%;
 		object-fit: cover;
+		height: 100%;
 	}
 }
 
+/* Section and aside orders. Controls flow order in one-column layout.*/
 #about_sg-aside1 {
 	order: 0
 }
@@ -597,6 +640,7 @@ input[type="radio"]:checked~label{ background-color: grey}
 }
 @media screen and (min-width: 50em) {
 	#about_sg-aside3 img {
+		/* Maintains pleasant composition when resizing page */
 		object-position: 30% 50%;
 	}
 }
@@ -604,10 +648,11 @@ input[type="radio"]:checked~label{ background-color: grey}
 	order: 6
 }
 
+/* Misc margins and sizing */
 .text_and_aside h2 {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 0.3em;
+	margin-bottom: .3em;
 }
 
 .text_and_aside section {
@@ -621,8 +666,4 @@ input[type="radio"]:checked~label{ background-color: grey}
 
 .text_and_aside aside figure > * {
 	width: 100%;
-}
-
-.text_and_aside aside figure img {
-	fill: cover;
 }
