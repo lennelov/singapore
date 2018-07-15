@@ -106,7 +106,9 @@ header ul li a {
   text-decoration: none;
   padding 5px;
   color: #222;
+	transition: color 0.1s;
   background-color:  white;
+	transition: background-color 0.1s;
 	padding: 0.6em 0 0.6em 0;
 	border-bottom: 1px solid lightgrey;
 }
@@ -155,6 +157,13 @@ main {
 
 main.textmain {
 	padding: 2% 10% 2% 10%;
+}
+
+main.textmain h2 {
+	margin: 1em 0 0.3em 0;
+}
+main.textmain p {
+	margin-bottom: 0.6em;
 }
 
 .main-top {
@@ -284,19 +293,28 @@ footer small {
 }
 
 .gallery-item {
+	/* Opacity: 0 hides all items except selected item. z-index: 0 is used to allow for interaction with the top-most (selected) item. */
   background-color: black;
   width: 100%;
-	overflow: hidden;
   position: absolute;
   height: 100%;
 	opacity: 0;
+	z-index: 0;
   transition: opacity .7s;
 }
 
 .gallery img {
   width: 100%;
-	min-height: 100%;
+	height: 100%;
   object-fit: cover;
+}
+
+#img1 {
+	object-position: 60% 0%;
+}
+
+#img2 {
+	object-position: 50% 40%;
 }
 
 .gallery-item figure {
@@ -307,6 +325,7 @@ footer small {
 
 .trigger:checked + .gallery-item {
   opacity: 1;
+	z-index: 1;
 }
 
 .gallery-nav__item {
@@ -327,6 +346,8 @@ footer small {
   cursor: pointer;
   transition: background-color .25s, color .25s ease-in-out;
 }
+
+input[type="radio"]:checked~label{ background-color: grey}
 
 .gallery-nav__label:hover,
 .gallery-nav__label:focus {
@@ -410,7 +431,7 @@ footer small {
 .feed-item {
 	max-width: 30em;
   flex: 1 1 auto;
-	margin: auto;
+	margin: 0 auto 0 auto;
 }
 
 /* -- Sights Page -- */
@@ -476,22 +497,32 @@ footer small {
 	text-indent: 2em;
 }
 
-article.sight {
-	margin: 0 20% 0 20%;
+/* -- General Sight Page Styles -- */
+
+.sight-content {
+	width: 50em;
+	max-width: 100%;
+	margin: auto;
 }
 
-/* -- Pinnacle Page -- */
+.sight-content-text {
+	width: 35em;
+	max-width: 100%;
+	margin: auto;
+}
 
-#pinnacle_view {
+.sight-main-figure {
 	width: 100%;
 }
 
-#pinnacle_view img {
+.sight-main-img {
 	object-fit: cover;
 	width: 100%;
 }
 
+
 /* -- Get There Page -- */
+
 .skyscanner-widget {
 	max-width: 40em;
 	margin: auto;
